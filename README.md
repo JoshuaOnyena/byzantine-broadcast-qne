@@ -6,7 +6,7 @@
 
 ## Abstract
 
-Three parties — a general and two lieutenants — must agree on a single order, even though one of them may be a traitor who sends conflicting messages to different peers. Classically, this is impossible for three parties with one faulty node when only plain (unauthenticated) messages are used. This application shows how entanglement lifts that barrier: each pair of nodes distributes a shared secret key by measuring EPR pairs, those keys authenticate the messages that follow, and the honest lieutenants detect any inconsistency a traitorous general introduces. When the general is honest, both lieutenants agree on the true order; when the general is faulty, both detect the mismatch and agree on a common default. The honest case was run on the QNE remote backend — including a run in which the end-to-end entangled links were established through intermediate nodes by entanglement swapping — and the faulty case was verified on the local simulator.
+Three parties a general and two lieutenants must agree on a single order, even though one of them may be a traitor who sends conflicting messages to different peers. Classically, this is impossible for three parties with one faulty node when only plain (unauthenticated) messages are used. This application shows how entanglement lifts that barrier: each pair of nodes distributes a shared secret key by measuring EPR pairs, those keys authenticate the messages that follow, and the honest lieutenants detect any inconsistency a traitorous general introduces. When the general is honest, both lieutenants agree on the true order; when the general is faulty, both detect the mismatch and agree on a common default. The honest case was run on the QNE remote backend — including a run in which the end-to-end entangled links were established through intermediate nodes by entanglement swapping — and the faulty case was verified on the local simulator.
 
 ---
 
@@ -37,7 +37,7 @@ Three keys are established:
 
 The general authenticates its order to each lieutenant using `k1` / `k2`. The lieutenants then tell each other which order they received, authenticated with their private lieutenant-only key. Because the general cannot forge or tamper with a message secured by a key it does not hold, a traitorous general cannot make its lie look consistent to both lieutenants. At least one lieutenant sees a mismatch, and both fall back to a common default.
 
-The security of this authentication does not degrade as the adversary gains computing power. There is no problem to factor, no hash to invert — the guarantee rests on the physics of the shared entangled state. This is the property that makes such primitives interesting alongside post-quantum cryptography.
+The security of this authentication does not degrade as the adversary gains computing power. There is no problem to factor, no hash to invert the guarantee rests on the physics of the shared entangled state. This is the property that makes such primitives interesting alongside post-quantum cryptography.
 
 ## 3. The protocol
 
