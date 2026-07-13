@@ -1,0 +1,12 @@
+{
+  "networks": [
+    "randstad",
+    "europe",
+    "the-netherlands"
+  ],
+  "roles": [
+    "general",
+    "lieutenant1",
+    "lieutenant2"
+  ]
+}

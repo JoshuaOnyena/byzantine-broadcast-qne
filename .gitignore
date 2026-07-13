@@ -1,0 +1,12 @@
+# QNE experiment output directories
+exp_*/
+*/results/processed.json
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+venv/
+
+# OS
+.DS_Store

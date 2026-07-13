@@ -1,0 +1,18 @@
+{
+  "_note": "Remote QNE backend run. Honest general, second reproduction. Roles mapped onto DIRECTLY-connected nodes paris / inssbruck / barcelona (europe network triangle), so entanglement was established over direct links rather than multi-hop. Trimmed to the round_result and classical-message phase.",
+  "id": 11977,
+  "round_set": "https://api.quantum-network.com/round-sets/11740/",
+  "created_at": "2026-07-13T21:28:21Z",
+  "round_result": {
+    "app_general":     { "faulty": 0, "order_to_l1": 1, "order_to_l2": 1 },
+    "app_lieutenant1": { "decision": 1, "my_order": 1, "peer_order": 1, "note": "orders consistent" },
+    "app_lieutenant2": { "decision": 1, "my_order": 1, "peer_order": 1, "note": "orders consistent" }
+  },
+  "classical_messages": [
+    { "from": "general",     "to": "lieutenant1", "message": "1|0,1,0" },
+    { "from": "general",     "to": "lieutenant2", "message": "1|1,1,0" },
+    { "from": "lieutenant1", "to": "lieutenant2", "message": "1|0,0,0" },
+    { "from": "lieutenant2", "to": "lieutenant1", "message": "1|0,0,0" }
+  ],
+  "routing_note": "Direct-link mapping (paris-inssbruck, paris-barcelona, inssbruck-barcelona all exist on the europe triangle). Compare with result 11968, where the same honest case was routed multi-hop across intermediate nodes."
+}

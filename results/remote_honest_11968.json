@@ -1,0 +1,18 @@
+{
+  "_note": "Remote QNE backend run. Honest general. Roles mapped onto rotterdam / amsterdam / the-hague; end-to-end entanglement was established via MULTI-HOP entanglement swapping across channels delft-rotterdam, delft-the-hague, leiden-the-hague, amsterdam-leiden. The full instruction trace is trimmed here to the decisive round_result and the classical-message phase.",
+  "id": 11968,
+  "round_set": "https://api.quantum-network.com/round-sets/11730/",
+  "created_at": "2026-07-12T23:30:18Z",
+  "round_result": {
+    "app_general":     { "faulty": 0, "order_to_l1": 1, "order_to_l2": 1 },
+    "app_lieutenant1": { "decision": 1, "my_order": 1, "peer_order": 1, "note": "orders consistent" },
+    "app_lieutenant2": { "decision": 1, "my_order": 1, "peer_order": 1, "note": "orders consistent" }
+  },
+  "classical_messages": [
+    { "from": "general",     "to": "lieutenant1", "message": "1|1,1,1" },
+    { "from": "general",     "to": "lieutenant2", "message": "1|0,1,1" },
+    { "from": "lieutenant1", "to": "lieutenant2", "message": "1|0,1,0" },
+    { "from": "lieutenant2", "to": "lieutenant1", "message": "1|0,1,0" }
+  ],
+  "routing_note": "The general<->lieutenant and lieutenant<->lieutenant entangled pairs were NOT direct links. The backend built them through intermediate nodes via entanglement swapping. The application code was unchanged and topology-agnostic -- the network layer handled multi-hop routing transparently."
+}
